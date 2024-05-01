@@ -35,7 +35,7 @@
         return true;
     }
 
-    static apenasNumeros(cpf: string): boolean {
+    private static apenasNumeros(cpf: string): boolean {
         for (let i: number = 0; i < cpf.length; i++) {
             if (!(+cpf.charAt(i) in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])) {
                 return false;
@@ -44,7 +44,7 @@
         return true;
     }
 
-    static todosCaracteresIguais(cpf: string): boolean {
+    private static todosCaracteresIguais(cpf: string): boolean {
         return cpf.split('').every(char => char === cpf[0]);
     }
 
